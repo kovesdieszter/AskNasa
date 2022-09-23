@@ -1,4 +1,4 @@
-![alt hydro1](img_asknasa.png)
+![alt hydro1](Dokumentumok/Codecool/CV/AskNasa/AskNasa/asknasa/img_asknasa.png)
 
 # Ask Nasa
 - This is a small React application.
