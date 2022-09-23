@@ -22,7 +22,8 @@ const MainPageComponent = () => {
     }, [state]);
 
     function getCurrentDate() {
-        return new Date().toJSON().slice(0,10);
+        if (!state) return new Date().toJSON().slice(0, 10);
+        else return state;
     }
 
     return (
