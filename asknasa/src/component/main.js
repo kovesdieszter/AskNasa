@@ -36,6 +36,11 @@ const MainPageComponent = () => {
             ></input>
             <h2> {data.title} </h2>
             <img  style={{"height" : "auto", "width" : "800px"}} src={data.hdurl}/>
+            <div className={"card"}>
+                <div id={"explanation"}>
+                    <p> {data.explanation}</p>
+                </div>
+            </div>
         </div>
     );
 }
