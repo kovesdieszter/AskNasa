@@ -32,14 +32,18 @@ const MainPageComponent = () => {
             <label htmlFor="previous">Choose date: </label>
             <input type="date" id="previous" name="previous"
                    onChange={previous => setState(previous.target.value)}
-                   max="<?= date('Y-m-d'); ?"
                    value={getCurrentDate()}
             ></input>
             <h2> {data.title} </h2>
-            <img  style={{"height" : "auto", "width" : "800px"}} src={data.hdurl}/>
+            <img style={{"height" : "auto", "width" : "800px"}} src={data.hdurl}/>
             <div className={"card"}>
                 <div id={"explanation"}>
-                    <p> {data.explanation}</p>
+                    {getCurrentDate() > new Date().toJSON().slice(0, 10) ? (
+                        <p> Unfortunately, we don't see the future. </p>
+                    ) : (
+
+                        <p> {data.explanation}</p>
+                    )}
                 </div>
             </div>
         </div>
