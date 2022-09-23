@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
 
 const fetchData = async (previous) => {
     console.log(previous)
@@ -21,6 +20,11 @@ const MainPageComponent = () => {
             setData(data)
         })
     }, [state]);
+
+    function getCurrentDate() {
+        return new Date().toJSON().slice(0,10);
+    }
+
     return (
         <div>
             <h1>Astronomy Picture of the Day</h1>
@@ -28,6 +32,7 @@ const MainPageComponent = () => {
             <input type="date" id="previous" name="previous"
                    onChange={previous => setState(previous.target.value)}
                    max="<?= date('Y-m-d'); ?"
+                   value={getCurrentDate()}
             ></input>
             <h2> {data.title} </h2>
             <img  style={{"height" : "auto", "width" : "800px"}} src={data.hdurl}/>
