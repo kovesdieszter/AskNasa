@@ -1,4 +1,4 @@
-![alt hydro1](Dokumentumok/Codecool/CV/AskNasa/AskNasa/asknasa/img_asknasa.png)
+![alt hydro1](asknasa/img_asknasa.png)
 
 # Ask Nasa
 - This is a small React application.
@@ -14,7 +14,4 @@
 
 ## Getting Started
 
-- Clone the repository using the command git clone `https://github.com/kovesdieszter/AskNasa.git`.
-- Install all necessary packages asked by your IDE.
-- Run `npm start` from asknasa directory.
-- Then type `http://localhost:3000/` in your browser.
+- This application is deployed on AWS, so just click [here](https://master.d1wdbxjttdhw54.amplifyapp.com/) and try it.
